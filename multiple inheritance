@@ -1,0 +1,29 @@
+class emp():
+    def details(self):
+        return f"name is {self.name}and salary is {self.salary}and language is {self.language}"
+    def __init__(self,aname,asalary,alanguage):
+        self.name = aname
+        self.salary = asalary
+        self.language = alanguage
+
+harry = emp("Harry",123,"Python")
+
+class pro():
+    def details(self):
+        return f"name is {self.name}and salary is {self.salary}and language is {self.language}"
+    def __init__(self,aname,asalary,alanguage):
+        self.name = aname
+        self.salary = asalary
+        self.language = alanguage
+
+larry = pro("Larry",234,"c++")
+
+class proemp(emp,pro):
+    language = "python"
+
+    def printlang(self):
+        print(self.language)
+
+emppro = proemp("Pro",987,"Java")
+
+print(larry.language)
